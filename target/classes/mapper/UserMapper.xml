@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.testMybatis.dao.UserMapper">
+    <select id="getUserInfo" resultType="com.example.demo.testMybatis.mode.User">
+     SELECT * FROM patrol.user WHERE username like "%"#{arg0}"%"
+    </select>
+
+    <select id="findAll" resultType="com.example.demo.testMybatis.mode.User">
+     SELECT * FROM patrol.user
+    </select>
+</mapper>
